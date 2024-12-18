@@ -17,7 +17,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t segbeyona2/cicd-e2:${BUILD_NUMBER} .
+                    sudo docker build -t segbeyona2/cicd-e2:${BUILD_NUMBER} .
                     '''
                 }
             }
