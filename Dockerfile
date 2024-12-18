@@ -1,9 +1,9 @@
-FROM python:3
+FROM python:alpine
 RUN pip install django==3.2
 
 COPY . .
 
-RUN apt-get update && apt-get install -y python3-distutils
+RUN apt-get update && apt-get install -y python3-distutils libpq-dev
 
 RUN python manage.py migrate
 EXPOSE 8000
